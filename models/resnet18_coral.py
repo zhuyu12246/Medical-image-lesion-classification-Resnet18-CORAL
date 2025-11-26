@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 from torchvision.models import resnet18
+from torchsummary import summary
 # ResNet18 + CORAL
 
 
@@ -16,3 +17,6 @@ class ResNet18_CORAL(nn.Module):
     def predict(self, logits):
         pred = (logits > 0).sum(dim=1)
         return pred
+
+net = ResNet18_CORAL(num_classes=5)
+summary(net, input_size=(3, 224, 224))
