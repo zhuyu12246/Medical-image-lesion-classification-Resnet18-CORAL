@@ -28,19 +28,19 @@ train_dataset = DataClass(
     split='train',
     transform=transform,
     download=True,
-    root='./data'
+    root='./data/RetinaMNIST'
 )
 val_dataset = DataClass(
     split='val',
     transform=transform,
     download=True,
-    root='./data'
+    root='./data/RetinaMNIST'
 )
 test_dataset = DataClass(
     split='test',
     transform=transform,
     download=True,
-    root='./data'
+    root='./data/RetinaMNIST'
 )
 
 print("Train size:", len(train_dataset))
