@@ -10,7 +10,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 BATCH = 32
 LR = 1e-5
-EPOCHS = 20
+EPOCHS = 50
 
 # transforms
 # transform = transforms.Compose([
